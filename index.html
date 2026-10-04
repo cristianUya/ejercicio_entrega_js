@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de notas de alumnos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="instructions">
+        <h2>Resultado esperado</h2>
+        <p>
+          Se debe entregar los archivos necesarios para la ejecución de la página web en HTML, JS y CSS
+          modularizados (Si aplica).
+        </p>
+
+        <p>La página tendrá las siguientes vistas:</p>
+
+        <div class="panel-form">
+          <form id="studentForm" novalidate>
+            <div class="campo">
+              <span>Nombre:</span>
+              <input id="nombre" name="nombre" type="text" placeholder="Nombre" />
+            </div>
+
+            <div class="campo">
+              <span>Certamen 1:</span>
+              <input id="certamen1" name="certamen1" type="number" min="0" max="100" step="0.01" placeholder="Certamen 1" />
+            </div>
+
+            <div class="campo">
+              <span>Certamen 2:</span>
+              <input id="certamen2" name="certamen2" type="number" min="0" max="100" step="0.01" placeholder="Certamen 2" />
+            </div>
+
+            <div class="campo">
+              <span>Certamen 3:</span>
+              <input id="certamen3" name="certamen3" type="number" min="0" max="100" step="0.01" placeholder="Certamen 3" />
+            </div>
+
+            <button type="submit">Agregar Alumno</button>
+          </form>
+        </div> 
+      </section>
+
+      <section id="results" class="results" aria-live="polite"></section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

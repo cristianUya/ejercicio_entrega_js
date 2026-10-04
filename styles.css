@@ -1,0 +1,175 @@
+:root {
+  --bg-dark: #23272d;
+  --text-dark: #2c2c2c;
+  --panel-light: #f3f3f3;
+  --panel-white: #f7f7f7;
+  --border-soft: #d4d4d4;
+  --green: #5bbf5b;
+  --green-dark: #3eaa41;
+  --danger: #d9534f;
+  --shadow: rgba(0, 0, 0, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-dark);
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f1f1f;
+}
+
+.page {
+  width: min(900px, calc(100% - 32px));
+  margin: 24px auto;
+}
+
+.instructions {
+  color: #f1f1f1;
+  margin-bottom: 28px;
+}
+
+.instructions h2 {
+  margin: 0 0 12px;
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.instructions p {
+  margin: 8px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.panel-form {
+  width: min(100%, 550px);
+  background: #f0f0f0;
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 18px 18px 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+#studentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.campo span {
+  font-weight: 700;
+  color: #2e2e2e;
+  font-size: 0.95rem;
+}
+
+#studentForm input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #f7f7f7;
+  color: var(--text-dark);
+}
+
+#studentForm input:focus {
+  outline: 2px solid rgba(72, 122, 255, 0.25);
+  border-color: #8d9dff;
+}
+
+#studentForm button {
+  margin-top: 8px;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 18px;
+  background: var(--green);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#studentForm button:hover {
+  background: var(--green-dark);
+}
+
+.form-message {
+  margin-top: 12px;
+  min-height: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form-message.error {
+  color: var(--danger);
+}
+
+.form-message.success {
+  color: #256d29;
+}
+
+.results {
+  width: min(100%, 520px);
+  background: var(--panel-white);
+  border: 1px solid var(--border-soft);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px var(--shadow);
+  color: var(--text-dark);
+}
+
+.result-group {
+  margin-bottom: 20px;
+}
+
+.student-item {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+.student-item strong,
+.summary strong {
+  font-weight: 700;
+}
+
+.summary {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-list li {
+  margin: 4px 0;
+}
+
+.empty-state {
+  font-size: 1rem;
+  color: #666;
+}
+
+@media (max-width: 640px) {
+  .instructions h2 {
+    font-size: 1.6rem;
+  }
+
+  .panel-form,
+  .results {
+    width: 100%;
+  }
+}
